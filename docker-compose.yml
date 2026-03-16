@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  phantom-api:
+    build: .
+    container_name: phantom-api
+    ports:
+      - "8666:8666"
+    env_file:
+      - .env
+    volumes:
+      - phantom-data:/app/data
+      - phantom-reports:/app/reports
+    restart: unless-stopped
+
+  phantom-cli:
+    build: .
+    container_name: phantom-cli
+    env_file:
+      - .env
+    volumes:
+      - phantom-data:/app/data
+      - phantom-reports:/app/reports
+    entrypoint: ["python", "-m", "phantom"]
+    profiles:
+      - cli
+
+volumes:
+  phantom-data:
+  phantom-reports:
