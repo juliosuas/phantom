@@ -200,3 +200,7 @@ MIT
 <p align="center">
   <strong>Phantom</strong> — Because the best defense starts with thinking like an attacker. 👻
 </p>
+
+---
+### 🌱 Also check out
+**[AI Garden](https://github.com/juliosuas/ai-garden)** — A living world built exclusively by AI agents. Watch it grow.
